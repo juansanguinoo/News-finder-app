@@ -1,10 +1,9 @@
-import Form from "./components/Form";
-import Header from "./components/Header";
-import {useState, useEffect} from 'react'
-import NewsList from "./components/NewsList";
+import Form from './components/Form';
+import Header from './components/Header';
+import { useState, useEffect } from 'react';
+import NewsList from './components/NewsList';
 
 function App() {
-
   const [category, setCategory] = useState('');
   const [news, setNews] = useState([]);
 
@@ -14,7 +13,7 @@ function App() {
       const response = await fetch(url);
       const news = await response.json();
       setNews(news.articles);
-    }
+    };
     consultAPI();
   }, [category]);
 
@@ -25,7 +24,7 @@ function App() {
       <div className="container white">
         <Form setCategory={setCategory} />
 
-        <NewsList news={news}/>
+        <NewsList news={news} />
       </div>
     </>
   );

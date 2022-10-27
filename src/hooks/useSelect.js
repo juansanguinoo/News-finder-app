@@ -1,13 +1,12 @@
-import React from 'react'
-import { useState } from 'react'
+import React from 'react';
+import { useState } from 'react';
 
 const useSelect = (initialState, OPTIONS) => {
-
   const [category, setCategory] = useState(initialState);
 
   const handleChange = (e) => {
     setCategory(e.target.value);
-  }
+  };
 
   const SelectNews = () => (
     <select
@@ -25,4 +24,4 @@ const useSelect = (initialState, OPTIONS) => {
   return [category, SelectNews];
 };
 
-export default useSelect
+export default useSelect;

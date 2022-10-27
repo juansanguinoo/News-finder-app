@@ -19,7 +19,7 @@ const Form = ({ setCategory }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setCategory(category);
-  }
+  };
 
   return (
     <div className={`${styles.seeker} row`}>

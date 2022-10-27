@@ -5,9 +5,9 @@ const News = ({ article }) => {
   const { urlToImage, url, title, description, source } = article;
 
   const image = urlToImage ? (
-    <div className='card-image'>
+    <div className="card-image">
       <img src={urlToImage} alt={title} />
-      <span className='card-title'>{source.name}</span>
+      <span className="card-title">{source.name}</span>
     </div>
   ) : null;
 
